@@ -1,0 +1,112 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = 'The UFO Wizard — Evidence-Based UAP Investigation';
+const description = 'MUFON Investigator Josh Rutledge applies systematic analysis to unexplained aerial phenomena across Arizona. Field-tested tools for satellite flare checking, evidence analysis, and disclosure tracking.';
+---
+
+<Layout title={title} description={description}>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content fade-in">
+        <div class="hero-badge">MUFON Investigator</div>
+        <h1>Evidence-Based <span class="accent">UAP Investigation</span></h1>
+        <p class="subhead">Investigator Josh Rutledge applies systematic analysis to unexplained aerial phenomena across Arizona. Every sighting deserves methodical examination—witness reports, sensor data, and verifiable documentation guide the search for answers.</p>
+        <div class="hero-ctas">
+          <a href="/sat-flare-checker" class="btn-primary">Launch Sat Flare Checker</a>
+          <a href="/research" class="btn-secondary">View Research →</a>
+        </div>
+      </div>
+      <div class="hero-visual fade-in delay-2">
+        <div class="hero-orb">
+          <img src="https://images.pexels.com/photos/10481322/pexels-photo-10481322.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Field investigator with camera equipment documenting the night sky" style="width:80%;height:80%;object-fit:cover;border-radius:50%;" loading="eager" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-label">Tools</div>
+      <h2 class="section-title">Built for Investigators</h2>
+      <p class="section-sub">Purpose-built tools eliminate common explanations fast. Check satellite flares, analyze evidence, and track disclosure — all free, designed by a field investigator.</p>
+
+      <div class="tools-grid">
+        <a href="/sat-flare-checker" class="tool-card">
+          <div class="tool-icon">🛰</div>
+          <h3>Satellite Flare Checker</h3>
+          <p>Check satellite flares, debris visibility windows, and celestial object positions for any sighting location and time. Uses live TLE data from CelesTrak.</p>
+          <span class="tool-link">Open tool →</span>
+        </a>
+        <a href="/sat-or-ufo" class="tool-card">
+          <div class="tool-icon">📡</div>
+          <h3>Sat or UFO</h3>
+          <p>Enter when and where you saw something, and this tool checks whether any sunlit satellite could have been visible from that position — ruling out the most common explanation first.</p>
+          <span class="tool-link">Open tool →</span>
+        </a>
+        <a href="/evidence-lab" class="tool-card">
+          <div class="tool-icon">🔬</div>
+          <h3>Evidence Lab</h3>
+          <p>Upload a photo or video and the lab reads the hidden metadata inside — when and where it was taken, on what device, and whether anything has touched it since.</p>
+          <span class="tool-link">Open tool →</span>
+        </a>
+        <a href="/ufo-disclosure-timeline" class="tool-card">
+          <div class="tool-icon">📅</div>
+          <h3>UFO Disclosure Timeline</h3>
+          <p>84 events tracking government disclosures, congressional hearings, whistleblower claims, and document releases from 1947 to today. Filter by category and source type.</p>
+          <span class="tool-link">Open timeline →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top: 0;">
+    <div class="container">
+      <div class="section-label">Method</div>
+      <h2 class="section-title">Investigation Standards</h2>
+      <p class="section-sub">Separate observation from interpretation. Cite verifiable sources for all claims. Protect witness identity unless consent is given. Submit findings to peer review.</p>
+
+      <div class="method-grid">
+        <div class="method-card">
+          <div class="method-icon">📋</div>
+          <h3>Field Analysis</h3>
+          <p>Systematic on-site investigation methods that document witness accounts and environmental conditions.</p>
+        </div>
+        <div class="method-card">
+          <div class="method-icon">🔍</div>
+          <h3>Data Correlation</h3>
+          <p>Cross-reference sighting reports with satellite tracking, weather patterns, and flight-path records.</p>
+        </div>
+        <div class="method-card">
+          <div class="method-icon">📸</div>
+          <h3>Evidence Review</h3>
+          <p>Rigorous examination of photos, videos, and sensor data to eliminate prosaic explanations first.</p>
+        </div>
+        <div class="method-card">
+          <div class="method-icon">📝</div>
+          <h3>Case Documentation</h3>
+          <p>Structured reporting that preserves witness testimony and physical evidence for long-term analysis.</p>
+        </div>
+        <div class="method-card">
+          <div class="method-icon">🧪</div>
+          <h3>Tool-Driven Analysis</h3>
+          <p>Custom tools screen satellite flares, calculate visibility windows, and correlate sighting parameters with known objects.</p>
+        </div>
+        <div class="method-card">
+          <div class="method-icon">✓</div>
+          <h3>Elimination Protocol</h3>
+          <p>Technology removes guesswork and accelerates the process from report to conclusion.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top: 0;">
+    <div class="container" style="text-align: center;">
+      <div class="section-label">Get Involved</div>
+      <h2 class="section-title">Saw Something Unexplained?</h2>
+      <p class="section-sub" style="margin: 0 auto 32px;">Document time, location, and direction immediately. Then use the tools above to start eliminating common explanations.</p>
+      <a href="/contact" class="btn-primary">Report a Sighting</a>
+    </div>
+  </section>
+</Layout>

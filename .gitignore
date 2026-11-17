@@ -1,0 +1,19 @@
+# build output
+dist/
+
+# dependencies
+node_modules/
+
+# astro
+.astro/
+
+# wrangler
+.wrangler/
+
+# environment
+.env
+.env.local
+
+# os
+.DS_Store
+Thumbs.db

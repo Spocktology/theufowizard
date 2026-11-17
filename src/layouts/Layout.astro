@@ -1,0 +1,114 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  fullViewport?: boolean;
+}
+
+const { title, description = 'Evidence-based UAP investigation by MUFON Investigator Josh Rutledge. Field-tested tools for satellite flare checking, evidence analysis, and disclosure tracking.', fullViewport = false } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalURL} />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content="The UFO Wizard" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="starfield"><div class="stars"></div></div>
+
+    <!-- Nav -->
+    <nav>
+      <a href="/" class="logo">
+        <span class="logo-mark"></span>
+        The UFO Wizard
+      </a>
+      <div class="nav-links">
+        <a href="/research">Research</a>
+        <a href="/sat-flare-checker">Sat Flare Checker</a>
+        <a href="/sat-or-ufo">Sat or UFO</a>
+        <a href="/speaking">Speaking</a>
+        <a href="/press-kit">Press</a>
+        <a href="/contact" class="nav-cta">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Main content -->
+    {fullViewport ? (
+      <div class="iframe-page">
+        <slot />
+      </div>
+    ) : <slot />}
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div>
+          <div class="footer-brand">The UFO Wizard</div>
+          <p class="footer-tagline">Evidence-based UAP investigation. Every sighting deserves methodical examination.</p>
+          <div class="social-links">
+            <a href="https://www.youtube.com/@Mysticjourneys44" title="YouTube" target="_blank" rel="noopener">YT</a>
+            <a href="https://www.instagram.com/mysticjourneys44/" title="Instagram" target="_blank" rel="noopener">IG</a>
+            <a href="https://x.com/" title="X" target="_blank" rel="noopener">X</a>
+            <a href="https://www.facebook.com/" title="Facebook" target="_blank" rel="noopener">FB</a>
+          </div>
+        </div>
+        <div>
+          <h4>Tools</h4>
+          <ul>
+            <li><a href="/sat-flare-checker">Satellite Flare Checker</a></li>
+            <li><a href="/sat-or-ufo">Sat or UFO</a></li>
+            <li><a href="/evidence-lab">Evidence Lab</a></li>
+            <li><a href="/ufo-disclosure-timeline">UFO Disclosure Timeline</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Investigate</h4>
+          <ul>
+            <li><a href="/research">Research</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/speaking">Speaking Engagements</a></li>
+            <li><a href="/press-kit">Press Kit</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="/contact">Get in touch</a></li>
+            <li><a href="https://buymeacoffee.com/joshrutledge" target="_blank" rel="noopener">Support the work</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 The UFO Wizard — Josh Rutledge</p>
+        <p>Built with Astro · Deployed on Cloudflare</p>
+      </div>
+    </footer>
+  </body>
+</html>

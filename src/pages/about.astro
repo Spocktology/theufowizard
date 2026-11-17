@@ -1,0 +1,71 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = 'About — The UFO Wizard';
+const description = 'Josh Rutledge, MUFON Field Investigator and Chief Investigator for Arizona. Evidence-driven UAP analysis combining witness testimony, sensor data, and elimination protocols.';
+---
+
+<Layout title={title} description={description}>
+  <section class="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image fade-in">
+          <img src="https://images.unsplash.com/photo-1431629087622-72b063a59b19?w=1152&h=768&q=80&auto=format&fit=max" alt="Field investigator documenting evidence at twilight" loading="eager" />
+        </div>
+        <div class="about-content fade-in delay-1">
+          <div class="section-label">About</div>
+          <h2>Evidence-Driven Analysis</h2>
+          <p>Every sighting deserves careful examination. Josh combines witness testimony, sensor data, and elimination protocols to separate the explained from the unexplained—no speculation, only documented findings.</p>
+          <p>Responded to witness reports across Arizona with full sensor arrays. Documented object trajectories, ruled out conventional aircraft through FAA cross-reference and radar data analysis.</p>
+          <div class="credentials">
+            <span class="credential"><span class="check">✓</span> MUFON Field Investigator</span>
+            <span class="credential"><span class="check">✓</span> MUFON Chief Investigator, AZ</span>
+            <span class="credential"><span class="check">✓</span> M.S. Psychology (Research)</span>
+            <span class="credential"><span class="check">✓</span> Tool Developer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top: 0;">
+    <div class="container">
+      <div class="section-label">Experience</div>
+      <h2 class="section-title">Field Investigation & Tool Development</h2>
+      <p class="section-sub">Appointed Chief Investigator for Arizona, overseeing case assignment protocols and training field teams in evidence collection standards across the Southwest region.</p>
+
+      <div class="method-grid">
+        <div class="method-card">
+          <div class="method-icon">🛰</div>
+          <h3>Tool-Driven Analysis</h3>
+          <p>Custom investigator tools screen satellite flares, calculate naked-eye visibility windows, and correlate sighting parameters with known objects. Technology removes guesswork and accelerates the process from report to conclusion.</p>
+        </div>
+        <div class="method-card">
+          <div class="method-icon">📍</div>
+          <h3>Field Analysis</h3>
+          <p>Systematic on-site investigation methods that document witness accounts and environmental conditions.</p>
+        </div>
+        <div class="method-card">
+          <div class="method-icon">🔗</div>
+          <h3>Data Correlation</h3>
+          <p>Cross-reference sighting reports with satellite tracking, weather patterns, and flight-path records.</p>
+        </div>
+        <div class="method-card">
+          <div class="method-icon">📸</div>
+          <h3>Evidence Review</h3>
+          <p>Rigorous examination of photos, videos, and sensor data to eliminate prosaic explanations first.</p>
+        </div>
+        <div class="method-card">
+          <div class="method-icon">📝</div>
+          <h3>Case Documentation</h3>
+          <p>Structured reporting that preserves witness testimony and physical evidence for long-term analysis.</p>
+        </div>
+        <div class="method-card">
+          <div class="method-icon">✓</div>
+          <h3>Elimination First</h3>
+          <p>Every investigation starts by eliminating the common: satellites, aircraft, celestial objects, and atmospheric phenomena.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

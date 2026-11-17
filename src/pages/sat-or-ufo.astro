@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = 'Sat or UFO — The UFO Wizard';
+const description = 'Field tool: enter when and where you saw something to check if any sunlit satellite was visible from that position.';
+---
+
+<Layout title={title} description={description} fullViewport={true}>
+  <div class="iframe-header">
+    <span class="iframe-title">📡 Sat or UFO</span>
+    <div class="iframe-actions">
+      <a href="https://spocktology.github.io/sat-or-ufo/" target="_blank" rel="noopener">Open in new tab ↗</a>
+      <a href="/">← Back</a>
+    </div>
+  </div>
+  <div class="iframe-container">
+    <iframe src="https://spocktology.github.io/sat-or-ufo/" title="Sat or UFO" loading="eager" allow="fullscreen"></iframe>
+  </div>
+</Layout>

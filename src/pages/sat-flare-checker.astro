@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = 'Satellite Flare Checker — The UFO Wizard';
+const description = 'Check whether any satellite could have produced a visible flare at your sighting location and time. Uses live TLE data from CelesTrak.';
+---
+
+<Layout title={title} description={description} fullViewport={true}>
+  <div class="iframe-header">
+    <span class="iframe-title">🛰 Satellite Flare Checker</span>
+    <div class="iframe-actions">
+      <a href="https://spocktology.github.io/satellite-flare-check/" target="_blank" rel="noopener">Open in new tab ↗</a>
+      <a href="/">← Back</a>
+    </div>
+  </div>
+  <div class="iframe-container">
+    <iframe src="https://spocktology.github.io/satellite-flare-check/" title="Satellite Flare Checker" loading="eager" allow="fullscreen"></iframe>
+  </div>
+</Layout>

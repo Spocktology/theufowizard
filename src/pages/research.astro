@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = 'Research — The UFO Wizard';
+const description = 'Evidence-driven analysis of UAP sightings, declassified documents, and investigative methods for witnesses and researchers.';
+---
+
+<Layout title={title} description={description}>
+  <section style="padding-top: 120px;">
+    <div class="container">
+      <div class="section-label">Research</div>
+      <h2 class="section-title">Case Files & Methods</h2>
+      <p class="section-sub">Evidence-driven analysis of UAP sightings, declassified documents, and investigative methods for witnesses and researchers.</p>
+    </div>
+  </section>
+
+  <section style="padding-top: 20px;">
+    <div class="container">
+      <div class="section-label">Reporting Standards</div>
+      <h2 class="section-title">How Cases Are Analyzed</h2>
+      <p class="section-sub">Assign confidence levels based on data quality. Separate observation from interpretation. Cite verifiable sources for all claims. Protect witness identity unless consent is given.</p>
+
+      <div class="method-grid" style="margin-top: 32px;">
+        <div class="method-card">
+          <div class="method-icon">1</div>
+          <h3>Document</h3>
+          <p>Record time, location, direction, and conditions as soon as possible. Preserve original files — never edit or recompress.</p>
+        </div>
+        <div class="method-card">
+          <div class="method-icon">2</div>
+          <h3>Eliminate</h3>
+          <p>Use the Sat Flare Checker and Sat or UFO tools to rule out satellites, debris, and celestial objects before anything else.</p>
+        </div>
+        <div class="method-card">
+          <div class="method-icon">3</div>
+          <h3>Correlate</h3>
+          <p>Cross-reference with weather data, flight paths, radar, and witness accounts from multiple angles.</p>
+        </div>
+        <div class="method-card">
+          <div class="method-icon">4</div>
+          <h3>Verify</h3>
+          <p>Submit findings to peer review. Separate what was observed from what it might mean.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top: 20px;">
+    <div class="container">
+      <div class="section-label">Tools</div>
+      <h2 class="section-title">Investigator Resources</h2>
+      <p class="section-sub">Free tools designed by a field investigator for field investigators. Use them to eliminate common explanations and focus on what's genuinely unexplained.</p>
+
+      <div class="tools-grid">
+        <a href="/sat-flare-checker" class="tool-card">
+          <div class="tool-icon">🛰</div>
+          <h3>Satellite Flare Checker</h3>
+          <p>Check whether any satellite could have produced a visible flare at your sighting's time and location. Supports historical TLE data.</p>
+          <span class="tool-link">Open tool →</span>
+        </a>
+        <a href="/sat-or-ufo" class="tool-card">
+          <div class="tool-icon">📡</div>
+          <h3>Sat or UFO</h3>
+          <p>Quick field tool — enter when and where you saw something to check if any sunlit satellite was above the horizon.</p>
+          <span class="tool-link">Open tool →</span>
+        </a>
+        <a href="/evidence-lab" class="tool-card">
+          <div class="tool-icon">🔬</div>
+          <h3>Evidence Lab</h3>
+          <p>Read EXIF metadata from photos and videos. Check timestamps, GPS coordinates, device info, and edit history.</p>
+          <span class="tool-link">Open tool →</span>
+        </a>
+        <a href="/ufo-disclosure-timeline" class="tool-card">
+          <div class="tool-icon">📅</div>
+          <h3>Disclosure Timeline</h3>
+          <p>84 events from 1947 to today. Track government disclosures, congressional hearings, whistleblower claims, and document releases.</p>
+          <span class="tool-link">Open timeline →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

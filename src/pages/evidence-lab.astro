@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = 'Evidence Lab — The UFO Wizard';
+const description = 'Upload a photo or video to read its hidden metadata — when and where it was taken, on what device, and whether anything has touched it since.';
+---
+
+<Layout title={title} description={description} fullViewport={true}>
+  <div class="iframe-header">
+    <span class="iframe-title">🔬 Evidence Lab</span>
+    <div class="iframe-actions">
+      <a href="https://spocktology.github.io/Evidence-Lab/" target="_blank" rel="noopener">Open in new tab ↗</a>
+      <a href="/">← Back</a>
+    </div>
+  </div>
+  <div class="iframe-container">
+    <iframe src="https://spocktology.github.io/Evidence-Lab/" title="Evidence Lab" loading="eager" allow="fullscreen"></iframe>
+  </div>
+</Layout>

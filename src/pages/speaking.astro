@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = 'Speaking Engagements — The UFO Wizard';
+const description = 'Upcoming speaking engagements, conference appearances, and public talks by Josh Rutledge, MUFON Investigator.';
+
+// Upcoming events — update these as engagements are booked
+const events = [
+  // Add events here as { date: '2026-12-15', time: '7:00 PM MST', title: 'Title', venue: 'Venue name', location: 'City, State', url: 'https://...' }
+];
+
+// Format date for display
+const months = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+---
+
+<Layout title={title} description={description}>
+  <section style="padding-top: 120px;">
+    <div class="container">
+      <div class="section-label">Speaking</div>
+      <h2 class="section-title">Speaking Engagements</h2>
+      <p class="section-sub">Upcoming talks, conference appearances, and public events. For booking inquiries, see the <a href="/contact" style="color: var(--accent); text-decoration: none;">contact page</a>.</p>
+
+      {events.length > 0 ? (
+        <div class="events-list">
+          {events.map((ev) => {
+            const [y, m, d] = ev.date.split('-');
+            return (
+              <a href={ev.url} class="event-card" target="_blank" rel="noopener">
+                <div class="event-date">
+                  <div class="day">{parseInt(d)}</div>
+                  <div class="month">{months[parseInt(m) - 1]}</div>
+                </div>
+                <div class="event-info">
+                  <h3>{ev.title}</h3>
+                  <p>{ev.venue} — {ev.location}</p>
+                  <div class="event-time">{ev.time}</div>
+                </div>
+                <div>→</div>
+              </a>
+            );
+          })}
+        </div>
+      ) : (
+        <div class="no-events">
+          <p style="font-size: 18px; margin-bottom: 8px; color: var(--text-muted);">No upcoming events scheduled.</p>
+          <p style="font-size: 14px;">Check back soon, or <a href="/contact" style="color: var(--accent); text-decoration: none;">get in touch</a> to book a speaking engagement.</p>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <section style="padding-top: 20px;">
+    <div class="container">
+      <div class="section-label">Bookings</div>
+      <h2 class="section-title">Invite Josh to Speak</h2>
+      <p class="section-sub">Available for conferences, podcasts, panels, and community events covering UAP investigation methodology, evidence analysis, satellite identification, and the history of government disclosure.</p>
+      <div style="margin-top: 32px;">
+        <a href="/contact" class="btn-primary">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+</Layout>

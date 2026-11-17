@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = 'UFO Disclosure Timeline — The UFO Wizard';
+const description = '84 events tracking government UFO/UAP disclosures, congressional hearings, whistleblower claims, and document releases from 1947 to today.';
+---
+
+<Layout title={title} description={description} fullViewport={true}>
+  <div class="iframe-header">
+    <span class="iframe-title">📅 UFO Disclosure Timeline</span>
+    <div class="iframe-actions">
+      <a href="https://spocktology.github.io/uapdisclosuretimeline/" target="_blank" rel="noopener">Open in new tab ↗</a>
+      <a href="/">← Back</a>
+    </div>
+  </div>
+  <div class="iframe-container">
+    <iframe src="https://spocktology.github.io/uapdisclosuretimeline/" title="UFO Disclosure Timeline" loading="eager" allow="fullscreen"></iframe>
+  </div>
+</Layout>

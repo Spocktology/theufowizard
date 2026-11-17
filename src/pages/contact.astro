@@ -1,0 +1,74 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = 'Contact — The UFO Wizard';
+const description = 'Contact Josh Rutledge, MUFON Investigator, for sighting reports, media inquiries, speaking engagements, and collaboration.';
+---
+
+<Layout title={title} description={description}>
+  <section style="padding-top: 120px;">
+    <div class="container">
+      <div class="section-label">Contact</div>
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="section-sub">Sighting reports, media inquiries, speaking engagements, or collaboration — all welcome. Include time, location, and direction for any sighting report.</p>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Report a Sighting</h3>
+          <p>Saw something unexplained? Document time, location, and direction immediately, then reach out. Include as much detail as you can — duration, movement, color, sound, and any photos or video (originals, unedited).</p>
+          <div class="contact-channels">
+            <a href="mailto:joshrutledge@theufowizard.com" class="contact-channel">
+              <div class="channel-icon">✉</div>
+              <div>
+                <div class="channel-label">Email</div>
+                <div class="channel-value">joshrutledge@theufowizard.com</div>
+              </div>
+            </a>
+            <a href="https://www.facebook.com/" class="contact-channel" target="_blank" rel="noopener">
+              <div class="channel-icon">f</div>
+              <div>
+                <div class="channel-label">Facebook</div>
+                <div class="channel-value">The UFO Wizard</div>
+              </div>
+            </a>
+            <a href="https://youtube.com/" class="contact-channel" target="_blank" rel="noopener">
+              <div class="channel-icon">▶</div>
+              <div>
+                <div class="channel-label">YouTube</div>
+                <div class="channel-value">Mystic Journeys 44</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-info">
+          <h3>Media & Speaking</h3>
+          <p>For podcast appearances, conference talks, media interviews, or panel discussions, please use the channels at left or visit the press kit for downloadable bio and headshot.</p>
+          <div class="contact-channels">
+            <a href="/press-kit" class="contact-channel">
+              <div class="channel-icon">📋</div>
+              <div>
+                <div class="channel-label">Press Kit</div>
+                <div class="channel-value">Download bio & headshot →</div>
+              </div>
+            </a>
+            <a href="/speaking" class="contact-channel">
+              <div class="channel-icon">🎤</div>
+              <div>
+                <div class="channel-label">Speaking</div>
+                <div class="channel-value">Upcoming engagements →</div>
+              </div>
+            </a>
+            <a href="https://buymeacoffee.com/joshrutledge" class="contact-channel" target="_blank" rel="noopener">
+              <div class="channel-icon">☕</div>
+              <div>
+                <div class="channel-label">Support</div>
+                <div class="channel-value">Buy me a coffee</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
