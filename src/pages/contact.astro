@@ -13,22 +13,56 @@ const description = 'Contact Josh Rutledge, MUFON Investigator, for sighting rep
       <p class="section-sub">Sighting reports, media inquiries, speaking engagements, or collaboration — all welcome. Include time, location, and direction for any sighting report.</p>
 
       <div class="contact-grid">
+        <!-- Contact form -->
         <div class="contact-info">
-          <h3>Report a Sighting</h3>
+          <h3>Send a Message</h3>
           <p>Saw something unexplained? Document time, location, and direction immediately, then reach out. Include as much detail as you can — duration, movement, color, sound, and any photos or video (originals, unedited).</p>
+
+          <form id="contact-form" class="contact-form" autocomplete="on">
+            <!-- Honeypot field — hidden from humans, bots fill it -->
+            <div style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
+              <label>Do not fill this field<input type="text" name="_hp" tabindex="-1" autocomplete="off" /></label>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="cf-name">Name <span class="req">*</span></label>
+                <input type="text" id="cf-name" name="name" required autocomplete="name" placeholder="Your name" />
+              </div>
+              <div class="form-field">
+                <label for="cf-email">Email <span class="req">*</span></label>
+                <input type="email" id="cf-email" name="email" required autocomplete="email" placeholder="you@email.com" />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="cf-subject">Subject <span class="opt">(optional)</span></label>
+              <input type="text" id="cf-subject" name="subject" autocomplete="off" placeholder="What's this about?" />
+            </div>
+
+            <div class="form-field">
+              <label for="cf-message">Message <span class="req">*</span></label>
+              <textarea id="cf-message" name="message" required rows="6" placeholder="Tell me about your sighting, inquiry, or proposal…"></textarea>
+            </div>
+
+            <button type="submit" id="cf-submit" class="btn-primary" style="width:100%;justify-content:center;">
+              Send Message →
+            </button>
+
+            <div class="form-status" id="cf-status" role="alert"></div>
+          </form>
+        </div>
+
+        <!-- Other channels -->
+        <div class="contact-info">
+          <h3>Other Channels</h3>
+          <p>Prefer a different method? Reach out through any of these, or visit the press kit for downloadable bio and headshot.</p>
           <div class="contact-channels">
-            <a href="mailto:joshrutledge@theufowizard.com" class="contact-channel">
+            <a href="mailto:joshrutledge@ourmysticjourneys.com" class="contact-channel">
               <div class="channel-icon">✉</div>
               <div>
                 <div class="channel-label">Email</div>
-                <div class="channel-value">joshrutledge@theufowizard.com</div>
-              </div>
-            </a>
-            <a href="https://www.facebook.com/" class="contact-channel" target="_blank" rel="noopener">
-              <div class="channel-icon">f</div>
-              <div>
-                <div class="channel-label">Facebook</div>
-                <div class="channel-value">The UFO Wizard</div>
+                <div class="channel-value">joshrutledge@ourmysticjourneys.com</div>
               </div>
             </a>
             <a href="https://www.youtube.com/@theufowizard" class="contact-channel" target="_blank" rel="noopener">
@@ -38,13 +72,13 @@ const description = 'Contact Josh Rutledge, MUFON Investigator, for sighting rep
                 <div class="channel-value">@theufowizard</div>
               </div>
             </a>
-          </div>
-        </div>
-
-        <div class="contact-info">
-          <h3>Media & Speaking</h3>
-          <p>For podcast appearances, conference talks, media interviews, or panel discussions, please use the channels at left or visit the press kit for downloadable bio and headshot.</p>
-          <div class="contact-channels">
+            <a href="https://www.facebook.com/" class="contact-channel" target="_blank" rel="noopener">
+              <div class="channel-icon">f</div>
+              <div>
+                <div class="channel-label">Facebook</div>
+                <div class="channel-value">The UFO Wizard</div>
+              </div>
+            </a>
             <a href="/press-kit" class="contact-channel">
               <div class="channel-icon">📋</div>
               <div>
@@ -72,3 +106,142 @@ const description = 'Contact Josh Rutledge, MUFON Investigator, for sighting rep
     </div>
   </section>
 </Layout>
+
+<style>
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .form-field label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+  }
+  .form-field .req {
+    color: var(--accent);
+  }
+  .form-field .opt {
+    font-weight: 400;
+    font-size: 11px;
+    color: var(--text-dim);
+  }
+  .form-field input,
+  .form-field textarea {
+    padding: 12px 16px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-hover);
+    background: var(--bg-deep);
+    color: var(--text);
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+    resize: vertical;
+  }
+  .form-field input::placeholder,
+  .form-field textarea::placeholder {
+    color: var(--text-dim);
+  }
+  .form-field input:focus,
+  .form-field textarea:focus {
+    border-color: var(--accent);
+  }
+  .form-status {
+    text-align: center;
+    font-size: 14px;
+    padding: 12px;
+    border-radius: var(--radius-sm);
+    display: none;
+  }
+  .form-status.visible { display: block; }
+  .form-status.success {
+    background: rgba(74, 216, 200, 0.1);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+  }
+  .form-status.error {
+    background: rgba(224, 101, 107, 0.1);
+    border: 1px solid #e0656b;
+    color: #e0656b;
+  }
+  @media (max-width: 900px) {
+    .form-row { grid-template-columns: 1fr; }
+  }
+</style>
+
+<script is:inline>
+  (function() {
+    var form = document.getElementById('contact-form');
+    if (!form) return;
+
+    var submitBtn = document.getElementById('cf-submit');
+    var status = document.getElementById('cf-status');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      var data = {};
+      try {
+        data = {
+          name: form.elements['name'].value.trim(),
+          email: form.elements['email'].value.trim(),
+          subject: form.elements['subject'].value.trim(),
+          message: form.elements['message'].value.trim(),
+          _hp: form.elements['_hp'].value.trim()
+        };
+      } catch(_) {
+        return;
+      }
+
+      if (!data.name || !data.email || !data.message) {
+        showStatus('Please fill in all required fields.', 'error');
+        return;
+      }
+
+      submitBtn.textContent = 'Sending…';
+      submitBtn.disabled = true;
+      status.classList.remove('visible');
+
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      })
+        .then(function(res) { return res.json(); })
+        .then(function(result) {
+          if (result.success) {
+            showStatus(result.message || 'Message sent!', 'success');
+            form.reset();
+            submitBtn.textContent = 'Send Message →';
+            submitBtn.disabled = false;
+          } else {
+            showStatus(result.error || 'Something went wrong. Please try again.', 'error');
+            submitBtn.textContent = 'Send Message →';
+            submitBtn.disabled = false;
+          }
+        })
+        .catch(function() {
+          showStatus('Network error. Please try again.', 'error');
+          submitBtn.textContent = 'Send Message →';
+          submitBtn.disabled = false;
+        });
+    });
+
+    function showStatus(msg, type) {
+      status.textContent = msg;
+      status.className = 'form-status visible ' + type;
+    }
+  })();
+</script>
